@@ -18,4 +18,6 @@ Route::get('/', function () {
 Route::group(['prefix' => 'merchant'], function(){
   Route::get('/', 'MerchantController@get_index');
   Route::get('/settings', 'MerchantController@get_settings');
+  Route::post('/settings', 'MerchantController@post_settings');
+
 });

@@ -15,4 +15,8 @@ class MerchantController extends Controller
     public function get_settings(){
       return view('backend.settings');
     }
+
+    public function post_settings(Request $request){
+      Settings::create($request->all());
+    }
 }
